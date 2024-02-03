@@ -1,0 +1,81 @@
+configuration management
+- Do you think ansible is better than other configurtion management tools? if yes, why?
+-can you write an ansible playbook to install httpd server and get it running
+- how ansible helped your organization
+- ansible dynamic inventory
+- ansible tower and have u used it? if yes, why?
+- how do you manage the RBAC of users for ansible tower
+- ansible galaxy command and why it is used for?
+- can you explain the structure of ansible playbook roles?
+- what are handlers in ansible and why are they used?
+- I would like to run a specific set of tasks only on vms and not on linux.. is it possible?
+- Does ansible support parallel execution of tasks?
+- protocol that ansible use to connect to vms?
+-  can you place them in order of precedence
+- how do you handles secrets in ansible?
+-  can we use ansible for Iac? if yes can you compare it with any Iac tools like terraform
+- can you talk about a ansible playbook that u wrote and how it helped your company
+-  what do you think that ansible can improve
+- why did you choose ansible why not chef, puppet
+-diff bet pull/push  mech
+-have you ever used modules
+-types of inventories.. explain 
+-real working of ansible.. modules->playbooks->plugins
+- practical experience of ansible vault
+ansible tower, its use
+- you have multiple files, u want to copy it to targeted host. This should happen recursively.
+- how do u use ansible to make encrypted files
+- diff between plays and playbooks
+- install nginx. write playbook
+- when mster node is communicating to worker/slave node. how do ansible ensure security while communicating
+- what do you prefer. playbooks or adhoc commands. --playbooks. then why we have adhoc commands
+- how do you handle error/exceptions in ansible
+-there is something ignoreerros in ansible. what is that
+- how do we use ansible facts
+- i have a playbook, there are number of tasks. i want to manage order of execution. OR why do we have serial keyword
+- winrm, based on that how ansible handles windows system
+- if i want to organise an structure in playbooks. what are the provisions that we have in ansible
+- significance of ansible.cfg file
+- how do we pass a dynamic inventory
+- what are group_vars
+- how do we manage windows machines using ansible
+- what is the best method to make content reusable/redistributable
+- ansible arch
+- Ansible galaxy
+- variables in ansible. difference between variable name and environment variable
+- how would you access a variable pf the first host in a group
+- how do I write an ansible handler with multiple tasks
+- how to keep secret data in a playbook
+- how is ansible used in continuos delivery pipeline
+- How can you create a LAMP stack and deploy a webpage by using Ansible
+- How do I set the PATH or any other environment variable for a task
+- How can I generate encrypted password for the user module
+- How can looping be done over a lists of hosts in a group, inside of a template
+- How can I display all the inventory vars defined for my host
+- How should one configure a Jump host to access servers that I have no direct access to
+- How can you handle different machines needing different user accounts or ports to log in with
+- Is it unsafe to bulk-set arguments from a variable
+- Can the process of configuring prod environment be automated
+- Have you worked with Ansible before? please share your experience
+- Is Ansible an Open-Source Tool
+- How can you connect other devices within Ansible
+-Is it possible to build our modules in Ansible
+- What does Fact mean in Ansible
+- What is the ask_pass module in Ansible
+- Explain the callback module in Ansible
+- Does Ansible support AWS
+- Does Ansible supports hardware provisioning
+- Write an Ansible playbook to automate the starting of EC2 instance
+- Can you copy files recursively onto a target host? If yes, how?
+- Write a playbook to create a backup of a file in the remote servers before copy
+
+
+
+ gcloud compute --project ceq-devops-sandbox ssh --region us-central1 gke-ceq-us-gke-poc-gke-node-19447db2-x1nw -- command 'uptime'  
+
+
+
+
+
+
+
