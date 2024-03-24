@@ -39,14 +39,50 @@ Consistency and Standardization: Ansible ensures that configurations across serv
 
 - ansible dynamic inventory
 -- ansible tower and have u used it? if yes, why?
-
-Consider the role of an air traffic controller at a busy airport. The controller’s job is to manage multiple flights, ensuring they take off, land, and navigate the airspace safely and efficiently. Now, imagine doing this job without a control tower – it would be chaotic, inefficient, and prone to errors.
-
 Ansible Tower is like the control tower in this scenario, but for IT automation. It helps manage, control, and navigate through numerous automation tasks (flights) in a complex IT environment (airspace). It provides a visual dashboard, role-based access control, and features like job scheduling and inventory management to ensure that all your automation tasks are handled efficiently and safely, just like an air traffic controller ensures smooth operation at an airport.
 
 - how do you manage the RBAC of users for ansible tower
+In Ansible Tower, Role-Based Access Control (RBAC) is managed through the Tower web interface. RBAC allows administrators to define roles with specific permissions and assign those roles to users or groups, controlling access to various features and resources within Tower. Here's how RBAC is typically managed in Ansible Tower:
+
+Creating Roles: Administrators define roles in Tower based on the specific permissions they want to grant. Roles can include permissions such as creating and modifying job templates, managing inventory, accessing the Tower settings, and more.
+
+Assigning Permissions to Roles: Within each role, administrators specify the permissions users or groups assigned to that role will have. These permissions can be fine-grained, allowing administrators to control access to individual features and resources in Tower.
+
+Assigning Roles to Users or Groups: After roles are defined, administrators assign them to users or groups. This determines the access level each user or group has within Tower. Users can be assigned multiple roles, allowing for flexibility in defining access permissions.
+
+Consider the role of an air traffic controller at a busy airport. The controller’s job is to manage multiple flights, ensuring they take off, land, and navigate the airspace safely and efficiently. Now, imagine doing this job without a control tower – it would be chaotic, inefficient, and prone to errors.
+
+
+
+https://www.unixarena.com/2019/03/ansible-tower-awx-configuring-role-based-access-rbac.html/#google_vignette
+
+
 - ansible galaxy command and why it is used for?
 - can you explain the structure of ansible playbook roles?
+
+An Ansible playbook is a YAML file that defines a series of tasks to be executed on one or more remote hosts. Playbooks are the heart of Ansible automation, providing a way to describe the desired state of the system and the actions needed to achieve that state. Here's an explanation of the structure of an Ansible playbook:
+Play Declaration: Each play begins with a declaration containing a set of attributes that define the scope and parameters of the play. These attributes include:
+
+name: A descriptive name for the play.
+hosts: The group or groups of hosts on which the tasks in the play will be executed.
+vars: Variables specific to the play.
+tasks: The list of tasks to be executed.
+Tasks: Within a play, tasks define the actions to be performed on the remote hosts. Each task is a dictionary containing one or more key-value pairs that specify the task's attributes. Common attributes include:
+
+name: A descriptive name for the task.
+action: The module or command to be executed.
+args: Arguments to be passed to the module or command.
+when: A conditional expression that determines whether the task should be executed.
+notify: Handlers to be notified when the task changes the system state.
+Handlers: Handlers are special tasks that are only executed if notified by other tasks. They are typically used to restart services or perform other actions in response to changes in the system state.
+
+Variables: Playbooks can define variables at various levels, including playbook-level variables, play-level variables, and task-level variables. These variables can be used to parameterize tasks, making playbooks more flexible and reusable.
+
+Includes and Imports: Playbooks can include or import other files, allowing for modularity and code reuse. This is useful for organizing complex playbooks into smaller, more manageable components.
+
+Tags: Tasks and plays can be tagged with labels, allowing for selective execution of specific tasks or plays based on their tags. This is useful for debugging, testing, or running specific subsets of tasks within a playbook.
+
+
 - what are handlers in ansible and why are they used?
 - I would like to run a specific set of tasks only on vms and not on linux.. is it possible?
 - Does ansible support parallel execution of tasks?
